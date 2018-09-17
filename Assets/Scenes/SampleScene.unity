@@ -273,6 +273,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6500678, y: 0.44475847}
   m_EdgeRadius: 0
+--- !u!114 &183197451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 183197445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c334915e7e28f743bd0eafeb3960273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &202357117 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000012822408694, guid: 1693592182833449bafba7003e7ab43d,
@@ -730,8 +741,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419786190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -6, z: 0}
-  m_LocalScale: {x: 2.0914, y: 2.82339, z: 2.0914}
+  m_LocalPosition: {x: 10.4, y: -5.6, z: 0}
+  m_LocalScale: {x: 2.6642895, y: 3.5967908, z: 2.6642895}
   m_Children:
   - {fileID: 1114429195}
   - {fileID: 1871269568}
@@ -955,6 +966,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -969,6 +981,18 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc855392e74fe04899ca6ae3245b476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  discInBasket: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1016,7 +1040,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.31, y: 0.15400004, z: -10}
+  m_LocalPosition: {x: -10.31, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1770,6 +1794,11 @@ Prefab:
     - target: {fileID: 4000012489227826, guid: f792495220f634b6d9a4120642d0419e, type: 2}
       propertyPath: m_LocalScale.z
       value: 5.217138
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010003530858, guid: f792495220f634b6d9a4120642d0419e,
+        type: 2}
+      propertyPath: idleTime
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58000012875354920, guid: f792495220f634b6d9a4120642d0419e, type: 2}
@@ -4212,7 +4241,7 @@ GameObject:
   - component: {fileID: 1871269568}
   - component: {fileID: 1871269569}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: InBasket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
