@@ -197,7 +197,7 @@ public class trajectoryScript : MonoBehaviour {
 				for (int i = k-1; i > 0; i--) {
 				
 					if (dots [i].gameObject.GetComponent<SpriteRenderer> ().enabled == false) {
-						Debug.Log ("nigggssss");
+						
 						return;
 					}
 				}

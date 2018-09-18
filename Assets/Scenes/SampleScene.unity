@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c334915e7e28f743bd0eafeb3960273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newDisc: {fileID: 183197445}
 --- !u!1 &202357117 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000012822408694, guid: 1693592182833449bafba7003e7ab43d,
@@ -741,8 +742,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419786190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.4, y: -5.6, z: 0}
-  m_LocalScale: {x: 2.6642895, y: 3.5967908, z: 2.6642895}
+  m_LocalPosition: {x: -32.3, y: -7.6, z: 0}
+  m_LocalScale: {x: 1.785074, y: 2.373882, z: 2.6642895}
   m_Children:
   - {fileID: 1114429195}
   - {fileID: 1871269568}
@@ -872,6 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e549433fa76b18458ea675a75bd6f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newBasket: {fileID: 419786190}
 --- !u!1 &455037360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011418475660, guid: 1693592182833449bafba7003e7ab43d,
@@ -1017,7 +1019,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.61
+  orthographic size: 14.172847
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1707,11 +1709,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012489227826, guid: f792495220f634b6d9a4120642d0419e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -24.86
+      value: -23.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000012489227826, guid: f792495220f634b6d9a4120642d0419e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.7
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012489227826, guid: f792495220f634b6d9a4120642d0419e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1761,12 +1763,12 @@ Prefab:
     - target: {fileID: 114000010003530858, guid: f792495220f634b6d9a4120642d0419e,
         type: 2}
       propertyPath: shootingPowerX
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114000010003530858, guid: f792495220f634b6d9a4120642d0419e,
         type: 2}
       propertyPath: shootingPowerY
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114000010003530858, guid: f792495220f634b6d9a4120642d0419e,
         type: 2}
@@ -1799,6 +1801,11 @@ Prefab:
         type: 2}
       propertyPath: idleTime
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 50000012117292754, guid: f792495220f634b6d9a4120642d0419e,
+        type: 2}
+      propertyPath: m_Simulated
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58000012875354920, guid: f792495220f634b6d9a4120642d0419e, type: 2}
@@ -3793,7 +3800,7 @@ GameObject:
   - component: {fileID: 1114429195}
   - component: {fileID: 1114429196}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3824,7 +3831,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8481159, y: 0.66907763}
+  m_Offset: {x: 0.8481159, y: 0.46592593}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3835,7 +3842,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.42609257, y: 1.4172747}
+  m_Size: {x: 0.42609262, y: 1.8235781}
   m_EdgeRadius: 0
 --- !u!1 &1129202175 stripped
 GameObject:
@@ -4240,6 +4247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871269568}
   - component: {fileID: 1871269569}
+  - component: {fileID: 1871269570}
   m_Layer: 0
   m_Name: InBasket
   m_TagString: Untagged
@@ -4285,6 +4293,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8057709, y: 0.2901555}
   m_EdgeRadius: 0
+--- !u!114 &1871269570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871269567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913bb153f46bca6458581a9de68afe1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inBasket: 0
+  newBasket: {fileID: 419786190}
 --- !u!1 &1894848616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000012990568922, guid: 1693592182833449bafba7003e7ab43d,
