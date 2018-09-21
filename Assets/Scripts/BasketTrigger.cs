@@ -26,9 +26,15 @@ public class BasketTrigger : MonoBehaviour {
     IEnumerator Example()
     {
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
         inBasket = false;
-        Destroy(transform.parent.gameObject);
+        Destroy(GetComponentInParent<SpriteRenderer>());
+
+        BoxCollider2D[] colliders = GetComponentsInParent<BoxCollider2D>();
+        foreach (BoxCollider2D collider in colliders)
+            Destroy(collider);
+        Destroy(GetComponentInParent<PolygonCollider2D>());
+        
 
     }
 }

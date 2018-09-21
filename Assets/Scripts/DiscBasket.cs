@@ -29,11 +29,12 @@ public class DiscBasket : MonoBehaviour {
     IEnumerator Example()
     {
         
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
 
         rb2d.isKinematic = true;
         
         rb2d.velocity = Vector3.zero;
+        transform.rotation = Quaternion.identity;
 
         GameObject.Find("Main Camera").GetComponent<CameraMovement>().discInBasket = false;
     }
