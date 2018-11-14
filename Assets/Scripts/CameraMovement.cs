@@ -31,10 +31,10 @@ public class CameraMovement : MonoBehaviour {
     void cameraMove()
     {
         startpos = new Vector3(transform.position.x, transform.localPosition.y, transform.localPosition.z);
-        endpos = new Vector3(transform.position.x + 30, transform.localPosition.y, transform.localPosition.z);
+        endpos = new Vector3(transform.localPosition.x + 30, transform.localPosition.y, transform.localPosition.z);
         if (cameramoved == false)
         {
-            transform.position = Vector3.MoveTowards(transform.position, endpos, 10 * Time.deltaTime);
+            transform.localPosition = Vector3.MoveTowards(transform.position, endpos, 10* Time.deltaTime);
             if(transform.position == endpos)
             {
                 cameramoved = true;
